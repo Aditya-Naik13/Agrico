@@ -49,10 +49,10 @@ export default function JourneyMapping() {
   ];
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 md:py-32 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24 bg-[#F8F8F8]">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
@@ -61,10 +61,11 @@ export default function JourneyMapping() {
         </motion.h2>
 
         <motion.div
-          className="w-full max-w-sm h-0.5 bg-white mb-16"
+          className="w-20 h-1 bg-[#2BA55D] mb-16"
           initial={{ scaleX: 0 }}
           animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
+          style={{ originX: 0 }}
         />
 
         {/* Phase Headers */}
@@ -77,7 +78,7 @@ export default function JourneyMapping() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
               transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
             >
-              <h3 className="text-white text-xl md:text-2xl lg:text-3xl">{phase.title}</h3>
+              <h3 className="text-white text-xl md:text-2xl font-bold leading-tight">{phase.title}</h3>
             </motion.div>
           ))}
         </div>
@@ -95,8 +96,8 @@ export default function JourneyMapping() {
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                     transition={{ delay: 0.5 + phaseIndex * 0.2 + stepIndex * 0.05, duration: 0.4 }}
                   >
-                    <div className="bg-white rounded-lg p-4 shadow-md border-l-4 border-[#4B7AFD] hover:shadow-lg transition-shadow">
-                      <p className="text-[#000000] text-sm md:text-base lg:text-lg">{step}</p>
+                    <div className="bg-white rounded-lg p-4 shadow-md border-l-4 border-[#4B7AFD]">
+                      <p className="text-[#1A1A1A] text-sm md:text-base">{step}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -124,16 +125,16 @@ export default function JourneyMapping() {
 
         {/* Delights Section */}
         <motion.div
-          className="mt-12 bg-[#4F4F4F] rounded-2xl p-8 md:p-12"
+          className="mt-12 bg-[#2BA55D] rounded-2xl p-8 md:p-12"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          <h3 className="text-white text-2xl md:text-3xl mb-6">Delights</h3>
+          <h3 className="text-white text-xl md:text-2xl font-bold leading-tight mb-6">Delights</h3>
           {delights.map((delight, index) => (
             <motion.p
               key={index}
-              className="text-white text-lg md:text-xl leading-relaxed"
+              className="text-white text-base md:text-lg leading-relaxed"
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ delay: 1.2, duration: 0.5 }}

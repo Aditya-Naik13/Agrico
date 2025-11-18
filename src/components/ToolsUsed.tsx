@@ -15,16 +15,24 @@ export default function ToolsUsed() {
   ];
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 md:py-32 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24 bg-[#F8F8F8]">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl mb-16"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
           Tools used
         </motion.h2>
+
+        <motion.div
+          className="w-20 h-1 bg-[#2BA55D] mb-16"
+          initial={{ scaleX: 0 }}
+          animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          style={{ originX: 0 }}
+        />
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-16">
           {tools.map((tool, index) => (
@@ -36,13 +44,13 @@ export default function ToolsUsed() {
               transition={{ delay: 0.3 + index * 0.2, duration: 0.6 }}
             >
               <motion.div
-                className="w-32 h-32 md:w-40 md:h-40 rounded-3xl shadow-2xl flex items-center justify-center mb-6 overflow-hidden bg-white p-4"
-                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-lg flex items-center justify-center mb-6 overflow-hidden bg-white p-4 border border-[#E5E5E5]"
+                whileHover={{ y: -4, boxShadow: "0 12px 24px -8px rgba(0,0,0,0.08)" }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
                 <img src={tool.image} alt={tool.name} className="w-full h-full object-contain" />
               </motion.div>
-              <p className="text-[#4D4D4D] text-xl md:text-2xl lg:text-3xl">{tool.name}</p>
+              <p className="text-[#525252] text-xl md:text-2xl font-bold leading-tight">{tool.name}</p>
             </motion.div>
           ))}
         </div>

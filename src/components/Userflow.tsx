@@ -7,16 +7,24 @@ export default function Userflow() {
   const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 md:py-32">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl mb-16"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
           Userflow
         </motion.h2>
+
+        <motion.div
+          className="w-20 h-1 bg-[#2BA55D] mb-16"
+          initial={{ scaleX: 0 }}
+          animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          style={{ originX: 0 }}
+        />
 
         {/* Userflow Diagram from Figma */}
         <motion.div

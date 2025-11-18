@@ -9,10 +9,10 @@ export default function SecondaryResearch() {
   const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 md:py-32">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
@@ -21,29 +21,32 @@ export default function SecondaryResearch() {
         </motion.h2>
 
         <motion.div
-          className="w-full max-w-sm h-0.5 bg-white mb-12"
+          className="w-20 h-1 bg-[#2BA55D] mb-16"
           initial={{ scaleX: 0 }}
           animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
+          style={{ originX: 0 }}
         />
 
-        <motion.p
-          className="text-[#4D4D4D] text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          According to the 77th round of the National Sample Survey by the National Statistical Office titled situation assessment of agricultural households has found out that the majority of Indian farmers sell their produce in local markets.
-        </motion.p>
+        <div className="max-w-4xl">
+          <motion.p
+            className="text-[#525252] text-base md:text-lg leading-relaxed mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            According to the 77th round of the National Sample Survey by the National Statistical Office titled situation assessment of agricultural households has found out that the majority of Indian farmers sell their produce in local markets.
+          </motion.p>
 
-        <motion.p
-          className="text-[#4D4D4D] text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          The survey has listed five reasons for dissatisfaction among farmers: 'lower than market price'; 'delayed payment'; 'deduction for loans borrowed'; 'faulty weighing and grading' and 'others'.
-        </motion.p>
+          <motion.p
+            className="text-[#525252] text-base md:text-lg leading-relaxed mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            The survey has listed five reasons for dissatisfaction among farmers: 'lower than market price'; 'delayed payment'; 'deduction for loans borrowed'; 'faulty weighing and grading' and 'others'.
+          </motion.p>
+        </div>
 
         {/* First Survey Image */}
         <motion.div
@@ -56,7 +59,7 @@ export default function SecondaryResearch() {
         </motion.div>
 
         <motion.p
-          className="text-[#4D4D4D] text-lg md:text-xl mb-4"
+          className="text-[#525252] text-sm md:text-base mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.6, duration: 0.6 }}
@@ -76,7 +79,7 @@ export default function SecondaryResearch() {
         </motion.div>
 
         <motion.p
-          className="text-[#4D4D4D] text-lg md:text-xl mb-8"
+          className="text-[#525252] text-sm md:text-base mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.8, duration: 0.6 }}
@@ -85,24 +88,26 @@ export default function SecondaryResearch() {
         </motion.p>
 
         {/* Key Insight */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-        >
-          <p className="text-[#35CB68] text-2xl md:text-3xl lg:text-4xl mb-6">
-            Who determines the final price that buyers pay for the produce? <span className="text-[#4D4D4D]">Was the question addressed in the wire article.</span>
-          </p>
-          <div className="text-[#4D4D4D] text-xl md:text-2xl lg:text-3xl leading-relaxed">
-            <p className="mb-4">
-              An <span className="text-[#35CB68]">arhtiya</span> is the middleman between traders and farmers who conducts the auction and charges a fee against it, not exceeding 1% of the total payment.
+        <div className="max-w-4xl">
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+          >
+            <p className="text-[#2BA55D] text-xl md:text-2xl font-bold leading-tight mb-6">
+              Who determines the final price that buyers pay for the produce? <span className="text-[#525252] font-normal">Was the question addressed in the wire article.</span>
             </p>
-            <p>
-              The arhtiya also doubles as a moneylender at this stage. Traders usually pay farmers within seven to 10 days of receiving the produce. However, if the farmers want the payment on the same day, the arhtiya pays money to the farmers on behalf of the traders and charges 1% interest.
-            </p>
-          </div>
-        </motion.div>
+            <div className="text-[#525252] text-base md:text-lg leading-relaxed">
+              <p className="mb-4">
+                An <span className="text-[#2BA55D] font-bold">arhtiya</span> is the middleman between traders and farmers who conducts the auction and charges a fee against it, not exceeding 1% of the total payment.
+              </p>
+              <p>
+                The arhtiya also doubles as a moneylender at this stage. Traders usually pay farmers within seven to 10 days of receiving the produce. However, if the farmers want the payment on the same day, the arhtiya pays money to the farmers on behalf of the traders and charges 1% interest.
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

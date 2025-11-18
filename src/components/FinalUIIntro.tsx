@@ -8,11 +8,11 @@ export default function FinalUIIntro() {
   const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24 bg-white overflow-hidden">
+      <div className="max-w-5xl mx-auto">
         {/* Title */}
         <motion.h2
-          className="text-[#35CB68] text-6xl md:text-8xl lg:text-[200px] text-center mb-8 leading-tight"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center mb-8"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8, type: "spring" }}
@@ -24,7 +24,7 @@ export default function FinalUIIntro() {
         <div className="relative w-full h-[600px] md:h-[800px] flex items-center justify-center">
           {/* Green Rounded Background */}
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-[60%] bg-[#35CB68] rounded-t-[100px]"
+            className="absolute bottom-0 left-0 right-0 h-[60%] bg-[#2BA55D] rounded-t-[100px]"
             initial={{ y: 100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -32,7 +32,7 @@ export default function FinalUIIntro() {
 
           {/* White Card/Platform */}
           <motion.div
-            className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[70%] max-w-4xl h-[50%] bg-white rounded-[78px] shadow-2xl"
+            className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[70%] max-w-4xl h-[50%] bg-white rounded-2xl shadow-2xl border border-[#E5E5E5]"
             initial={{ y: 50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -85,9 +85,9 @@ export default function FinalUIIntro() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.9, duration: 0.6 }}
         >
-          <p className="text-4xl md:text-5xl lg:text-6xl">
-            <span className="text-[#35CB68]">agri</span>
-            <span className="text-[#00530D]">co</span>
+          <p className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            <span className="text-[#2BA55D]">agri</span>
+            <span className="text-[#1E7A43]">co</span>
           </p>
         </motion.div>
       </div>
