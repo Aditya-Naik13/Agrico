@@ -15,16 +15,24 @@ export default function Features() {
   ];
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 md:py-32">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl mb-16"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
           Features
         </motion.h2>
+
+        <motion.div
+          className="w-20 h-1 bg-[#2BA55D] mb-16"
+          initial={{ scaleX: 0 }}
+          animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          style={{ originX: 0 }}
+        />
 
         <div className="space-y-6">
           {features.map((feature, index) => (
@@ -36,14 +44,14 @@ export default function Features() {
               transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
             >
               <motion.div
-                className="absolute -left-4 top-0 w-2 h-full bg-[#35CB68] rounded-full"
+                className="absolute -left-4 top-0 w-2 h-full bg-[#2BA55D] rounded-full"
                 initial={{ scaleY: 0 }}
                 animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
                 transition={{ delay: 0.4 + index * 0.1, duration: 0.4 }}
               />
               <motion.p
-                className="text-[#4D4D4D] text-3xl md:text-5xl lg:text-6xl xl:text-7xl pl-8 py-4"
-                whileHover={{ x: 20, color: "#35CB68" }}
+                className="text-[#525252] text-xl md:text-2xl font-bold leading-tight pl-8 py-4"
+                whileHover={{ x: 20, color: "#2BA55D" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 {feature}
@@ -57,7 +65,7 @@ export default function Features() {
           {[1, 2, 3, 4, 5, 6].map((num, index) => (
             <motion.p
               key={num}
-              className="text-[#35CB68] text-9xl"
+              className="text-[#2BA55D] text-9xl"
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 0.05, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}

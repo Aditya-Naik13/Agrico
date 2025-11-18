@@ -55,11 +55,11 @@ export default function UserPersonas() {
   ];
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24 bg-white">
+      <div className="max-w-5xl mx-auto">
         {/* Title */}
         <motion.h2
-          className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl mb-12 leading-tight"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
@@ -67,7 +67,13 @@ export default function UserPersonas() {
           User Personas
         </motion.h2>
 
-        <div className="w-full max-w-sm h-0.5 bg-white mb-16" />
+        <motion.div
+          className="w-20 h-1 bg-[#2BA55D] mb-16"
+          initial={{ scaleX: 0 }}
+          animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          style={{ originX: 0 }}
+        />
 
         {/* Personas Grid */}
         <div className="space-y-20">
@@ -90,10 +96,10 @@ export default function UserPersonas() {
 
                 {/* Left Column: Name, Description */}
                 <div className="lg:col-span-3">
-                  <h3 className="text-[#006711] text-2xl md:text-3xl lg:text-4xl mb-4">
+                  <h3 className="text-[#1E7A43] text-xl md:text-2xl font-bold leading-tight mb-4">
                     {persona.name}
                   </h3>
-                  <p className="text-[#4D4D4D] text-lg md:text-xl lg:text-2xl leading-relaxed">
+                  <p className="text-[#525252] text-sm md:text-base leading-relaxed">
                     {persona.description}
                   </p>
                 </div>
@@ -112,10 +118,10 @@ export default function UserPersonas() {
                 <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Pain Points */}
                   <div>
-                    <h4 className="text-[#E43334] text-xl md:text-2xl lg:text-3xl mb-4">Pain Points</h4>
+                    <h4 className="text-[#E43334] text-xl md:text-2xl font-bold leading-tight mb-4">Pain Points</h4>
                     <ul className="space-y-2">
                       {persona.painPoints.map((point, i) => (
-                        <li key={i} className="text-[#4D4D4D] text-base md:text-lg lg:text-xl leading-relaxed">
+                        <li key={i} className="text-[#525252] text-sm md:text-base leading-relaxed">
                           {point}
                         </li>
                       ))}
@@ -124,10 +130,10 @@ export default function UserPersonas() {
 
                   {/* Benefits */}
                   <div>
-                    <h4 className="text-[#0FA379] text-xl md:text-2xl lg:text-3xl mb-4">Benefits</h4>
+                    <h4 className="text-[#0FA379] text-xl md:text-2xl font-bold leading-tight mb-4">Benefits</h4>
                     <ul className="space-y-2">
                       {persona.benefits.map((benefit, i) => (
-                        <li key={i} className="text-[#4D4D4D] text-base md:text-lg lg:text-xl leading-relaxed">
+                        <li key={i} className="text-[#525252] text-sm md:text-base leading-relaxed">
                           {benefit}
                         </li>
                       ))}

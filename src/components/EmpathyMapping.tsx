@@ -9,17 +9,25 @@ export default function EmpathyMapping() {
   const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   return (
-    <section ref={ref} className="relative min-h-screen px-4 md:px-8 lg:px-16 py-20 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section ref={ref} className="relative min-h-screen px-6 md:px-12 lg:px-16 py-20 md:py-24 bg-white">
+      <div className="max-w-5xl mx-auto">
         {/* Title */}
         <motion.h2
-          className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl mb-16 leading-tight"
+          className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
           Empathy<br />Mapping
         </motion.h2>
+
+        <motion.div
+          className="w-20 h-1 bg-[#2BA55D] mb-16"
+          initial={{ scaleX: 0 }}
+          animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          style={{ originX: 0 }}
+        />
 
         {/* Empathy Map Grid - Matching Figma Frame Layout */}
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-0">
@@ -37,14 +45,14 @@ export default function EmpathyMapping() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h3 className="text-[#35CB68] text-3xl md:text-4xl lg:text-5xl mb-6">Says</h3>
-            <ul className="space-y-3 list-disc pl-6 text-[#4D4D4D]">
-              <li className="text-lg md:text-xl lg:text-2xl">"The prices offered seems inconsistent every time."</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"My stocks stay unsold for a long time."</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"My buddies crops sold for an higher price compared to mine."</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"I need an inventory manager!"</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"I cant pin point a high quality source."</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"When will I get my payment?"</li>
+            <h3 className="text-[#2BA55D] text-xl md:text-2xl font-bold leading-tight mb-6">Says</h3>
+            <ul className="space-y-3 list-disc pl-6 text-[#525252]">
+              <li className="text-sm md:text-base">"The prices offered seems inconsistent every time."</li>
+              <li className="text-sm md:text-base">"My stocks stay unsold for a long time."</li>
+              <li className="text-sm md:text-base">"My buddies crops sold for an higher price compared to mine."</li>
+              <li className="text-sm md:text-base">"I need an inventory manager!"</li>
+              <li className="text-sm md:text-base">"I cant pin point a high quality source."</li>
+              <li className="text-sm md:text-base">"When will I get my payment?"</li>
             </ul>
           </motion.div>
 
@@ -55,13 +63,13 @@ export default function EmpathyMapping() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h3 className="text-[#35CB68] text-3xl md:text-4xl lg:text-5xl mb-6">Thinks</h3>
-            <ul className="space-y-3 list-disc pl-6 text-[#4D4D4D]">
-              <li className="text-lg md:text-xl lg:text-2xl">"This middle-man is too unfair towards me."</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"Will the quality be on par with what I'm paying?"</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"I think I might be scammed."</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"The pay does not match my handwork."</li>
-              <li className="text-lg md:text-xl lg:text-2xl">"Is there any way to sell my produce efficiently"</li>
+            <h3 className="text-[#2BA55D] text-xl md:text-2xl font-bold leading-tight mb-6">Thinks</h3>
+            <ul className="space-y-3 list-disc pl-6 text-[#525252]">
+              <li className="text-sm md:text-base">"This middle-man is too unfair towards me."</li>
+              <li className="text-sm md:text-base">"Will the quality be on par with what I'm paying?"</li>
+              <li className="text-sm md:text-base">"I think I might be scammed."</li>
+              <li className="text-sm md:text-base">"The pay does not match my handwork."</li>
+              <li className="text-sm md:text-base">"Is there any way to sell my produce efficiently"</li>
             </ul>
           </motion.div>
 
@@ -101,13 +109,13 @@ export default function EmpathyMapping() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ delay: 0.7, duration: 0.6 }}
           >
-            <h3 className="text-[#35CB68] text-3xl md:text-4xl lg:text-5xl mb-6">Does</h3>
-            <ul className="space-y-3 list-disc pl-6 text-[#4D4D4D]">
-              <li className="text-lg md:text-xl lg:text-2xl">Looks out for advice</li>
-              <li className="text-lg md:text-xl lg:text-2xl">Sells their produce directly to the market.</li>
-              <li className="text-lg md:text-xl lg:text-2xl">Gets in touch with people who have experience in commerce.</li>
-              <li className="text-lg md:text-xl lg:text-2xl">Asks a middle man to help them sell their produce.</li>
-              <li className="text-lg md:text-xl lg:text-2xl">Buys from untrusted vendors in marketplace.</li>
+            <h3 className="text-[#2BA55D] text-xl md:text-2xl font-bold leading-tight mb-6">Does</h3>
+            <ul className="space-y-3 list-disc pl-6 text-[#525252]">
+              <li className="text-sm md:text-base">Looks out for advice</li>
+              <li className="text-sm md:text-base">Sells their produce directly to the market.</li>
+              <li className="text-sm md:text-base">Gets in touch with people who have experience in commerce.</li>
+              <li className="text-sm md:text-base">Asks a middle man to help them sell their produce.</li>
+              <li className="text-sm md:text-base">Buys from untrusted vendors in marketplace.</li>
             </ul>
           </motion.div>
 
@@ -118,13 +126,13 @@ export default function EmpathyMapping() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            <h3 className="text-[#35CB68] text-3xl md:text-4xl lg:text-5xl mb-6">Feels</h3>
-            <ul className="space-y-3 list-disc pl-6 text-[#4D4D4D]">
-              <li className="text-lg md:text-xl lg:text-2xl"><span className="font-bold">Concerned</span> about bought produce.</li>
-              <li className="text-lg md:text-xl lg:text-2xl"><span className="font-bold">Worried</span> about left over surplus.</li>
-              <li className="text-lg md:text-xl lg:text-2xl"><span className="font-bold">Sad</span> on how things turned out.</li>
-              <li className="text-lg md:text-xl lg:text-2xl"><span className="font-bold">Feels</span> hopeful on getting an fair price for sales.</li>
-              <li className="text-lg md:text-xl lg:text-2xl"><span className="font-bold">Motivated</span> to digitize the process of buying produce.</li>
+            <h3 className="text-[#2BA55D] text-xl md:text-2xl font-bold leading-tight mb-6">Feels</h3>
+            <ul className="space-y-3 list-disc pl-6 text-[#525252]">
+              <li className="text-sm md:text-base"><span className="font-bold">Concerned</span> about bought produce.</li>
+              <li className="text-sm md:text-base"><span className="font-bold">Worried</span> about left over surplus.</li>
+              <li className="text-sm md:text-base"><span className="font-bold">Sad</span> on how things turned out.</li>
+              <li className="text-sm md:text-base"><span className="font-bold">Feels</span> hopeful on getting an fair price for sales.</li>
+              <li className="text-sm md:text-base"><span className="font-bold">Motivated</span> to digitize the process of buying produce.</li>
             </ul>
           </motion.div>
         </div>

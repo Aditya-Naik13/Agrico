@@ -3,10 +3,10 @@ import imgIPhone13Pro from "figma:asset/8e16961190dc15513508fae8bc5450c82a3a786a
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 md:px-8 lg:px-16 py-20">
-      {/* Background Animated Leaves */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 lg:px-16 py-24 md:py-32">
+      {/* Background Animated Leaves - More subtle */}
       <motion.div
-        className="absolute -left-20 top-1/4 opacity-20"
+        className="absolute -left-20 top-1/4 opacity-10"
         animate={{
           rotate: [0, 10, -10, 0],
           y: [0, -20, 0],
@@ -17,11 +17,11 @@ export default function Hero() {
           ease: "easeInOut"
         }}
       >
-        <LeafIcon className="w-32 h-32 md:w-48 md:h-48 text-[#35CB68]" />
+        <LeafIcon className="w-32 h-32 md:w-40 md:h-40 text-[#2BA55D]" />
       </motion.div>
 
       <motion.div
-        className="absolute -right-20 top-2/3 opacity-20"
+        className="absolute -right-20 top-2/3 opacity-10"
         animate={{
           rotate: [0, -10, 10, 0],
           y: [0, 20, 0],
@@ -33,7 +33,7 @@ export default function Hero() {
           delay: 1
         }}
       >
-        <LeafIcon className="w-40 h-40 md:w-56 md:h-56 text-[#35CB68]" />
+        <LeafIcon className="w-40 h-40 md:w-48 md:h-48 text-[#2BA55D]" />
       </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -45,19 +45,19 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div
-            className="flex items-center gap-4 mb-8 justify-center lg:justify-start"
+            className="flex items-center gap-4 mb-6 justify-center lg:justify-start"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h1 className="text-6xl md:text-8xl lg:text-9xl">
-              <span className="text-[#35CB68]">agri</span>
-              <span className="text-black">co</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <span className="text-[#2BA55D]">agri</span>
+              <span className="text-[#1A1A1A]">co</span>
             </h1>
           </motion.div>
 
           <motion.div
-            className="w-full max-w-xs h-0.5 bg-white my-8 mx-auto lg:mx-0"
+            className="w-24 h-1 bg-[#2BA55D] my-6 mx-auto lg:mx-0"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}

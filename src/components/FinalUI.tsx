@@ -70,9 +70,9 @@ export default function FinalUI() {
   ];
 
   return (
-    <section ref={ref} className="relative px-4 md:px-8 lg:px-16 py-20 md:py-32 bg-white overflow-hidden">
+    <section ref={ref} className="relative px-6 md:px-12 lg:px-16 py-20 md:py-24 bg-white overflow-hidden">
       {/* Hero Section with Final UI Text */}
-      <div className="max-w-7xl mx-auto relative z-10 mb-32">
+      <div className="max-w-5xl mx-auto relative z-10 mb-32">
         <motion.div
           className="relative mb-20"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -80,7 +80,7 @@ export default function FinalUI() {
           transition={{ duration: 0.8 }}
         >
           {/* Background green banner */}
-          <div className="bg-[#35CB68] rounded-[100px] py-16 md:py-32 px-8 relative overflow-hidden">
+          <div className="bg-[#2BA55D] rounded-2xl py-16 md:py-32 px-8 relative overflow-hidden">
             {/* Animated Background Leaves */}
             <motion.div
               className="absolute top-10 left-10 opacity-30"
@@ -96,19 +96,19 @@ export default function FinalUI() {
             </motion.div>
 
             <div className="text-center relative z-10">
-              <h2 className="text-white text-6xl md:text-8xl lg:text-[200px] leading-none mb-12">
+              <h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
                 Final UI
               </h2>
 
               {/* Hero Phone with Agrico Branding */}
-              <div className="max-w-4xl mx-auto bg-white rounded-[78px] p-8 md:p-16 shadow-2xl">
+              <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-16 shadow-2xl border border-[#E5E5E5]">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-[#35CB68] rounded-[30px] flex items-center justify-center flex-shrink-0">
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-[#2BA55D] rounded-2xl flex items-center justify-center flex-shrink-0">
                     <svg className="w-14 h-14 md:w-20 md:h-20 text-white" viewBox="0 0 90 88" fill="none">
                       <path d="M21.2606 16.2016C16.5544 10.2671 10.4912 5.55026 3.58164 2.44806C2.8923 8.84556 3.23087 15.3122 4.5845 21.6027C5.97172 28.1997 8.81018 34.4052 12.8939 39.7688C17.5855 45.6769 23.6495 50.3491 30.5586 53.379C31.2628 47.022 30.9387 40.593 29.5987 34.339C28.1826 27.7498 25.3253 21.5558 21.232 16.2016H21.2606Z" fill="currentColor"/>
                     </svg>
                   </div>
-                  <h3 className="text-[#35CB68] text-5xl md:text-7xl lg:text-8xl">agrico</h3>
+                  <h3 className="text-[#2BA55D] text-4xl md:text-5xl lg:text-6xl font-bold">agrico</h3>
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function FinalUI() {
       </div>
 
       {/* Screen Showcases */}
-      <div className="max-w-7xl mx-auto space-y-32">
+      <div className="max-w-5xl mx-auto space-y-32">
         {screens.map((screen, index) => (
           <motion.div
             key={screen.title}
@@ -175,11 +175,11 @@ export default function FinalUI() {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <h3 className="text-black text-3xl md:text-4xl lg:text-5xl mb-4">{screen.title}</h3>
+              <h3 className="text-[#1A1A1A] text-2xl md:text-3xl font-bold leading-tight mb-4">{screen.title}</h3>
               {screen.subtitle && (
-                <h4 className="text-[#35CB68] text-2xl md:text-3xl lg:text-4xl mb-6">{screen.subtitle}</h4>
+                <h4 className="text-[#2BA55D] text-xl md:text-2xl font-bold leading-tight mb-6">{screen.subtitle}</h4>
               )}
-              <p className="text-[#4D4D4D] text-lg md:text-xl lg:text-2xl leading-relaxed">
+              <p className="text-[#525252] text-base md:text-lg leading-relaxed">
                 {screen.description}
               </p>
             </motion.div>
@@ -189,15 +189,15 @@ export default function FinalUI() {
 
       {/* Government Side */}
       <motion.div
-        className="max-w-7xl mx-auto mt-32"
+        className="max-w-5xl mx-auto mt-32"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
-        <h3 className="text-[#000000] text-4xl md:text-6xl lg:text-7xl mb-6 text-center">Well, What about the Government?</h3>
-        <p className="text-[#000000] text-3xl md:text-4xl lg:text-5xl mb-8 text-center">Or Client Side</p>
-        <p className="text-[#000000] text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-16 text-center max-w-4xl mx-auto">
+        <h3 className="text-[#1A1A1A] text-2xl md:text-3xl font-bold leading-tight mb-6 text-center">Well, What about the Government?</h3>
+        <p className="text-[#1A1A1A] text-xl md:text-2xl font-bold leading-tight mb-8 text-center">Or Client Side</p>
+        <p className="text-[#525252] text-base md:text-lg leading-relaxed mb-16 text-center max-w-4xl mx-auto">
           Got That Covered, Just like the Problem Statement
         </p>
         
